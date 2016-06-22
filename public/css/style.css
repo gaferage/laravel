@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'jonah';
+    src: url('../font/Jonah.ttf');
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.page {
+    width: 100%;
+    display: inline-block;
+    background-color: #261111;
+    min-height: 100%;
+}
+
+.page-left {
+    width: 40%;
+    float: left;
+}
+
+.page-right {
+    width: 40%;
+    float: left;
+}
+
+.title {
+    width: 100%;
+    display: inline-block;
+    padding: 40px;
+    text-align: center;
+}
+
+.title p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    color: whitesmoke;
+}
+
+.logo {
+    width: 100%;
+    text-align: center;
+}
+
+.logo-img {
+    width: 50%;
+    height: 200px;
+    margin-left: 25%;
+    background-image: url("../img/logo.jpg");
+    background-size: 100% 100%;
+}
+
+
+.panel-form {
+    padding: 20px;
+    border-radius: 5%;
+    outline: yellow;
+    font-family: 'jonah';
+    color: white;
+}
+
+.form-component, .form-component-rad, .form-component-dob {
+    width: 100%;
+    margin: 5px 0px;
+    display: inline-block;
+}
+
+.form-component label,
+.form-component-rad label{
+    width: 100%;
+    float: left;
+    text-align: left;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.form-component
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=date] {
+    float: left;
+    outline: yellow;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px;
+    padding-top: 5px;
+    border: 1px solid lightgray;
+    background-color: #463939;
+    color: yellow;
+}
+
+.form-component-rad label {
+    width: 20%;
+    text-align: right;
+}
+
+input[type=radio] {
+    float: left;
+    margin: 5px 10px;
+}
+
+.grade-dob {
+    display: inline-block;
+    width: 100%;
+}
+
+.form-component-grade {
+    clear: both;
+    width: 50%;
+}
+
+.form-component-grade label {
+    width: 200px;
+    border-radius: 3px;
+    border: 1px solid #D1D3D4;
+    font-family: 'jonah';
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.form-component-grade input.radio:empty {
+    margin-left: -999px;
+}
+
+.form-component-grade input.radio:empty ~ label {
+    position: relative;
+    float: left;
+    line-height: 2.5em;
+    text-indent: 3.25em;
+    margin-top: 2em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.form-component-grade input.radio:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 2.5em;
+    background: #D1D3D4;
+    border-radius: 3px 0 0 3px;
+}
+
+.form-component-grade input.radio:hover:not(:checked) ~ label:before {
+    content:'\2714';
+    text-indent: .9em;
+    color: #C2C2C2;
+}
+
+.form-component-grade input.radio:hover:not(:checked) ~ label {
+    color: #888;
+}
+
+.form-component-grade input.radio:checked ~ label:before {
+    content:'\2714';
+    text-indent: .9em;
+    color: #463939;
+    background-color: yellow;
+}
+
+.form-component-grade input.radio:checked ~ label {
+    color: yellow;
+}
+
+.form-component-grade input.radio:focus ~ label:before {
+    box-shadow: 0 0 0 3px #999;
+}
+
+.form-component-dob {
+    width: 40%;
+    float: right;
+}
+
+.form-component-dob label {
+    text-transform: uppercase;
+    font-weight:bolder;
+    font-style: 15px;
+    vertical-align: middle;
+}
+
+input[type=submit] {
+    float: left;
+    outline: yellow;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    background-color: #463939;
+    color: yellow;
+    font-family:jonah;
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+input[type=submit]:hover {
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}

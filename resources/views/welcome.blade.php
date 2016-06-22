@@ -1,48 +1,88 @@
-<html>
-	<head>
-		<title>Laravel</title>
-		
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nico course registration</title>
+  <link rel="stylesheet" href="{{'css/style.css'}}">
+  <link rel="stylesheet" href="{{'css/sweetalert.css'}}">
+  <script src="{{'script/jquery-1.12.1.min.js'}}"></script>
+  <script src="{{'script/sweetalert.min.js'}}"></script>
+  <script src="{{'script/register.js'}}"></script>
+</head>
+<body>
 
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				color: #B0BEC5;
-				display: table;
-				font-weight: 100;
-				font-family: 'Lato';
-			}
+  <div class="page">
+    <div class="page-left">
+      <div class="title">
+        <p>Welcome to Nico Course</p>
+      </div>
+      <div class="logo">
+        <div class="logo-img"></div>
+      </div>
+    </div>
 
-			.container {
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-			}
+    <div class="page-right">
+      <div class="panel-form">
 
-			.content {
-				text-align: center;
-				display: inline-block;
-			}
+        <form action="#">
+          <div class="form-component">
+            <label for="fullname">Fullname </label>
+            <input type="text" id="fullname">
+          </div>
 
-			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
-			}
+          <div class="form-component">
+            <label for="email">email </label>
+            <input type="email" id="email">
+          </div>
 
-			.quote {
-				font-size: 24px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
-			</div>
-		</div>
-	</body>
+          <div class="form-component">
+            <label for="password">Password </label>
+            <input type="password" id="password">
+          </div>
+
+          <div class="form-component">
+            <label for="conPassword">Confirm Password </label>
+            <input type="password" id="conPassword">
+          </div>
+
+          <div class="form-component-rad">
+            <label for="gender">Male </label>
+            <input type="radio" id="genderM" name="gender" value="male">
+            <label for="conPassword">Female </label>
+            <input type="radio" id="genderF" name="gender" value="female">
+          </div>
+
+          <div class="grade-dob">
+            <div class="form-component-grade">
+              <input type="radio" name="radio" id="grade1" value="middle" class="radio" checked/>
+              <label for="grade1">Middle school</label>
+            </div>
+
+            <div class="form-component-grade">
+              <input type="radio" name="radio" id="grade2" value="high" class="radio"/>
+              <label for="grade2">High school</label>
+            </div>
+
+            <div class="form-component-grade">
+              <input type="radio" name="radio" id="grade3" value="college" class="radio"/>
+              <label for="grade3">College</label>
+            </div>
+
+            <div class="form-component-dob">
+              <label for="dob">Date of birth </label>
+              <input type="date" id="dob">
+            </div>
+          </div>
+
+
+          <div class="form-component">
+            <input type="submit" name="register" id="register" value="Register">
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>
